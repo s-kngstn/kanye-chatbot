@@ -1,0 +1,8 @@
+#Folders or/& files to ignore
+.DS_Store
+.vscode/
+ideas.js
+notes.txt
+
+#Ignore scss map files
+styles/*.css.map
