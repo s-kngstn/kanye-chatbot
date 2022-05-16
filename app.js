@@ -36,6 +36,17 @@ const responseForFortune = [
   "A good time to finish up old tasks",
 ];
 
+const matchForAge = ["old", "age"];
+const responseForAge = [
+  "I just dont care maaaannnn.. But let me tell you, I was born on June 8, 1977.. in Atlanta, GA",
+];
+
+const matchForBirthday = ["birthday"];
+const responseForBirthday = ["Yeah.. birthdays.. mines June 8, 1977.. "];
+
+const matchForKim = ["kim", "kardashian"];
+const responseForKim = ["Yo get my wifes name out your mouth!!"];
+
 // Response Functions
 
 const kanyeReplyAPI = () => {
@@ -110,6 +121,24 @@ form.addEventListener("submit", (e) => {
   console.log(lowerCaseString);
   const yourMessageArr = lowerCaseString.split(" ");
   console.log(yourMessageArr);
+
+  // Kim Response
+  if (doesItMatch(yourMessageArr, matchForKim)) {
+    kanyeResponse(responseForKim);
+    return;
+  }
+
+  // Birthday Response
+  if (doesItMatch(yourMessageArr, matchForBirthday)) {
+    kanyeResponse(responseForBirthday);
+    return;
+  }
+
+  // Age Response
+  if (doesItMatch(yourMessageArr, matchForAge)) {
+    kanyeResponse(responseForAge);
+    return;
+  }
 
   // Fortune Response
   if (doesItMatch(yourMessageArr, matchForFortune)) {
