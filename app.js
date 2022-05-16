@@ -8,13 +8,35 @@ const responseForHello = [
   "Yo it's Kanye, whats up?",
   "Ayo, Kanye here",
   "Eyyy wassup!!",
-  "Hey, your message was good.. but Beyonce has the greatest message of all time!",
+  "Hey, hope you're good.. that was a nice greeting.. but Beyonce has the greatest message of all time!",
   "Hello? How'd you get my number?",
+  "Yo.. any idea where Kim's at? I miss her..",
 ];
 
-const logThis = (message) => {
-  return message;
-};
+const matchesForGoodBye = ["cya", "bye"];
+const responseForGoodBye = [
+  "Peace",
+  "Laters..Dont forget to buy my next album!!",
+  "Yoo! Dont go! I'm so lonely since Kim left.. ",
+];
+
+const matchForFortune = ["fortune"];
+const responseForFortune = [
+  "A beautiful, smart, and loving person will be coming into your life",
+  "A dubious friend may be an enemy in camouflage",
+  "A faithful friend is a strong defense",
+  "A feather in the hand is better than a bird in the air",
+  "A fresh start will put you on your way",
+  "A friend asks only for your time not your money",
+  "A friend is a present you give yourself",
+  "Kim is not your wife, shes mine!",
+  "A gambler not only will lose what he has, but also will lose what he doesn't have",
+  "A golden egg of opportunity falls into your lap this month",
+  "A good friendship is often more important than a passionate romance",
+  "A good time to finish up old tasks",
+];
+
+// Response Functions
 
 const kanyeReplyAPI = () => {
   const KANYE_API = "https://api.kanye.rest/";
@@ -37,7 +59,20 @@ const kanyeReplyAPI = () => {
   }, 2000);
 };
 
+const kanyeResponse = (responseArray) => {
+  setTimeout(() => {
+    const para = document.createElement("p");
+    para.innerHTML =
+      responseArray[Math.floor(Math.random() * responseArray.length)];
+    chatBox.appendChild(para);
+  }, 2000);
+};
+
 // Helper functions
+const logThis = (message) => {
+  return message;
+};
+
 const allLowerCase = (string) => {
   const lowerCaseString = string
     .split(" ")
@@ -76,18 +111,21 @@ form.addEventListener("submit", (e) => {
   const yourMessageArr = lowerCaseString.split(" ");
   console.log(yourMessageArr);
 
+  // Fortune Response
+  if (doesItMatch(yourMessageArr, matchForFortune)) {
+    kanyeResponse(responseForFortune);
+    return;
+  }
+
+  // Leaving Response
+  if (doesItMatch(yourMessageArr, matchesForGoodBye)) {
+    kanyeResponse(responseForGoodBye);
+    return;
+  }
   // Greeting Response
   if (doesItMatch(yourMessageArr, matchesForHello)) {
-    setTimeout(() => {
-      const para = document.createElement("p");
-      para.innerHTML =
-        responseForHello[Math.floor(Math.random() * responseForHello.length)];
-      chatBox.appendChild(para);
-    }, 2000);
+    kanyeResponse(responseForHello);
   } else {
-    // Space
-
-    // Kanyes Response //
     kanyeReplyAPI();
   }
 
