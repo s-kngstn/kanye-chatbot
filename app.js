@@ -20,7 +20,7 @@ const responseForGoodBye = [
   "Yoo! Dont go! I'm so lonely since Kim left.. ",
 ];
 
-const matchForFortune = ["fortune"];
+const matchForFortune = ["fortune", "fortune?"];
 const responseForFortune = [
   "A beautiful, smart, and loving person will be coming into your life",
   "A dubious friend may be an enemy in camouflage",
@@ -36,15 +36,15 @@ const responseForFortune = [
   "A good time to finish up old tasks",
 ];
 
-const matchForAge = ["old", "age"];
+const matchForAge = ["old", "age", "born", "born?", "age?", "old?"];
 const responseForAge = [
   "I just dont care maaaannnn.. But let me tell you, I was born on June 8, 1977.. in Atlanta, GA",
 ];
 
-const matchForBirthday = ["birthday"];
+const matchForBirthday = ["birthday", "birthday?"];
 const responseForBirthday = ["Yeah.. birthdays.. mines June 8, 1977.. "];
 
-const matchForKim = ["kim", "kardashian"];
+const matchForKim = ["kim", "kardashian", "kim?", "kardashian?"];
 const responseForKim = ["Yo get my wifes name out your mouth!!"];
 
 // Response Functions
@@ -111,6 +111,7 @@ form.addEventListener("submit", (e) => {
   const userMsg = logThis(userInput.value);
   //=== DOM STICKING PARA TO PAGE ==========//
   const para = document.createElement("p");
+  para.classList.add("chat-box__user-text");
   para.innerHTML = userMsg;
   chatBox.appendChild(para);
   userInput.value = "";

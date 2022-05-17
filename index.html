@@ -1,25 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat with Kanye</title>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" type="text/javascript"></script>
-</head>
-<body>
-  <h2>Feeling Lonely?</h2>
-  <h3>Need some advice?</h3>
-  <h1>Kanye's got your back...</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat with Kanye</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+      type="text/javascript"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+<!-- 
+      <h2>Feeling Lonely?</h2>
+      <h3>Need some advice?</h3>
+      <h1>Kanye's got your back...</h1> -->
+      <h1 class="header__title">Chat with Kanye</h1>
+    </header>
+    <div class="phone__contain">
 
-  <div class="chat-box"></div>
-  <form class="chat-box__form">
-    <input class="chat-box__input" type="text" name="userInput" id="userInput">
-    <button class="chat-box__btn" id="btn" type="submit">Send</button>
-  </form>
-
-  <script src="app.js"></script>
-</body>
+      <div class="phone__container">
+        
+        <div class="phone-header">
+          <img
+          class="phone-header__avatar"
+          src="./assets/images/kanye-avatar.jpeg"
+          alt="kanye avatar"
+          />
+          <h2 class="phone-header__title">Kanye West</h2>
+        </div>
+        <main>
+          <div class="chat">
+            <div class="chat-box"></div>
+          </div>
+        </main>
+        <div class="phone-footer">
+          <section class="phone-footer__section">
+            <form class="chat-box__form">
+              <input
+              class="chat-box__input"
+              type="text"
+              name="userInput"
+              id="userInput"
+              placeholder="Type a message"
+              />
+              <button class="chat-box__btn" id="btn" type="submit"><i class='fa fa-send'></i></button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+    <footer>
+      some footer stuff will go here
+    </footer>
+      <script
+      src="https://kit.fontawesome.com/55981f14a4.js"
+      crossorigin="anonymous"
+      ></script>
+      <script src="app.js"></script>
+  </body>
 </html>
