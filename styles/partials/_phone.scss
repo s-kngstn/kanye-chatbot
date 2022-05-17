@@ -1,0 +1,144 @@
+@use "./variables" as *;
+
+.phone {
+  &__contain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    height: calc(100vh - 132px);
+  }
+
+  &__container {
+    display: inline-block;
+    width: 360px;
+    border: 6px $phone-dark solid;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+}
+
+.phone-header {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem;
+  background-color: $phone-dark;
+  &__avatar {
+    height: 40px;
+    border-radius: 150px;
+    margin-right: 1rem;
+  }
+
+  &__title {
+    font-size: 0.875rem;
+  }
+}
+
+.chat {
+  height: 500px;
+  overflow: scroll;
+  border: 6px $phone-dark solid;
+  background: url("../../assets/images/phone-background.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0.5rem;
+}
+
+.phone-footer {
+  background-color: $phone-dark;
+}
+
+.chat-box {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  &__form {
+    display: flex;
+    padding: 1rem;
+  }
+  &__input {
+    width: 100%;
+    border-radius: 50px;
+    padding: 0.5rem;
+    border: transparent 1px solid;
+  }
+
+  &__btn {
+    border-radius: 50px;
+    margin-left: 0.6rem;
+    background-color: #bae37c;
+    color: $phone-dark;
+    border: transparent 1px solid;
+    padding: 0.6rem;
+  }
+
+  &__user-text,
+  &__kanye-text {
+    display: inline-block;
+    border: transparent 1px solid;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    color: #000;
+    font-size: 0.75rem;
+  }
+
+  &__user-text {
+    background-color: #dcf8c6;
+  }
+
+  &__kanye-text {
+    background-color: #fafafa;
+  }
+}
+
+.kanye {
+  &__image {
+    height: 350px;
+    position: absolute;
+    top: 20px;
+    left: -6px;
+    z-index: -1;
+    animation: moveHead 10s infinite;
+  }
+}
+
+@keyframes moveHead {
+  0% {
+    left: -6px;
+  }
+  25% {
+    left: -40px;
+  }
+
+  30% {
+    left: -60px
+  }
+  40% {
+    left: -80px;
+  }
+  50% {
+    left: -90px;
+  }
+  60% {
+    left: -100px;
+  }
+  75% {
+    left: -120px;
+    transform: rotate(-10deg);
+  }
+  80% {
+    left: -140px;
+  }
+  90% {
+    left: -160px;
+  }
+  100% {
+    left: -180px;
+    transform: rotate(-20deg);
+  }
+}

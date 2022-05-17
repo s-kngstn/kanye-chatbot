@@ -65,6 +65,7 @@ const kanyeReplyAPI = () => {
       const kanyeReply = logThis(reply);
       const para = document.createElement("p");
       para.innerHTML = kanyeReply;
+      para.classList.add("chat-box__kanye-text");
       chatBox.appendChild(para);
     };
   }, 2000);
@@ -75,6 +76,7 @@ const kanyeResponse = (responseArray) => {
     const para = document.createElement("p");
     para.innerHTML =
       responseArray[Math.floor(Math.random() * responseArray.length)];
+    para.classList.add("chat-box__kanye-text");
     chatBox.appendChild(para);
   }, 2000);
 };

@@ -17,21 +17,19 @@
   </head>
   <body>
     <header class="header">
-<!-- 
+      <!-- 
       <h2>Feeling Lonely?</h2>
       <h3>Need some advice?</h3>
       <h1>Kanye's got your back...</h1> -->
       <h1 class="header__title">Chat with Kanye</h1>
     </header>
     <div class="phone__contain">
-
       <div class="phone__container">
-        
         <div class="phone-header">
           <img
-          class="phone-header__avatar"
-          src="./assets/images/kanye-avatar.jpeg"
-          alt="kanye avatar"
+            class="phone-header__avatar"
+            src="./assets/images/kanye-avatar.jpeg"
+            alt="kanye avatar"
           />
           <h2 class="phone-header__title">Kanye West</h2>
         </div>
@@ -39,30 +37,42 @@
           <div class="chat">
             <div class="chat-box"></div>
           </div>
+          <div class="kanye">
+            <img class="kanye__image" src="/assets/images/kanye-face.png" alt="kanye smiling head">
+          </div>
         </main>
         <div class="phone-footer">
           <section class="phone-footer__section">
             <form class="chat-box__form">
               <input
-              class="chat-box__input"
-              type="text"
-              name="userInput"
-              id="userInput"
-              placeholder="Type a message"
+                class="chat-box__input"
+                type="text"
+                name="userInput"
+                id="userInput"
+                placeholder="Type a message"
               />
-              <button class="chat-box__btn" id="btn" type="submit"><i class='fa fa-send'></i></button>
+              <button class="chat-box__btn" id="btn" type="submit">
+                <i class="fa fa-send"></i>
+              </button>
             </form>
           </section>
         </div>
       </div>
     </div>
-    <footer>
-      some footer stuff will go here
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__list-item"><a href="#"><i class="fa fa-github fa-lg"></i></a></li>
+        <li class="footer__list-item"><a href="#"><i class="fa fa-linkedin fa-lg"></i></a></li>
+        <li class="footer__list-item"><a href="#"><i class="fa fa-stack-overflow fa-lg"></i></a></li>
+      </ul>
+      <p class="footer__copyright">
+        <a href="#"> 2022 &copy; samkingston.xyz </a>
+      </p>
     </footer>
-      <script
+    <script
       src="https://kit.fontawesome.com/55981f14a4.js"
       crossorigin="anonymous"
-      ></script>
-      <script src="app.js"></script>
+    ></script>
+    <script src="app.js"></script>
   </body>
 </html>
