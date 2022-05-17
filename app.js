@@ -34,6 +34,16 @@ const responseForFortune = [
   "A golden egg of opportunity falls into your lap this month",
   "A good friendship is often more important than a passionate romance",
   "A good time to finish up old tasks",
+  "A hunch is creativity trying to tell you something",
+  "A lifetime friend shall soon be made",
+  "A lifetime of happiness lies ahead of you",
+  "A new perspective will come with the new year",
+  "A pleasant surprise is waiting for you",
+  "A short pencil is usually better than a long memory any day",
+  "Be careful or you could fall for some tricks today",
+  "Because you demand more from yourself, others respect you deeply",
+  "Believe in yourself and others will too",
+  "Chance favors those in motion",
 ];
 
 const matchForAge = ["old", "age", "born", "born?", "age?", "old?"];
@@ -168,9 +178,7 @@ form.addEventListener("submit", (e) => {
   // POST SHOULD BE RENDERED TO PAGE AS IS BEFORE CHANGING TO LOWERCASE
 
   const lowerCaseString = allLowerCase(userMsg);
-  console.log(lowerCaseString);
   const yourMessageArr = lowerCaseString.split(" ");
-  console.log(yourMessageArr);
 
   // if ((yourMessageArr, matchForFood)) {
   //   kanyeFood(yourMessageArr);
@@ -211,12 +219,6 @@ form.addEventListener("submit", (e) => {
   } else {
     kanyeReplyAPI();
   }
-
-  // if ((yourMessageArr, matchForFood)) {
-  //   kanyeFood(yourMessageArr);
-  // } else {
-  //   kanyeReplyAPI();
-  // }
 
   console.log(userMsg);
 });
