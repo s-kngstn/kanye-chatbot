@@ -85,6 +85,7 @@ main {
   border-radius: 50px;
   padding: 0.5rem;
   border: transparent 1px solid;
+  outline: none;
 }
 .chat-box__btn {
   border-radius: 50px;

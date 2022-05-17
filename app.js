@@ -45,7 +45,26 @@ const matchForBirthday = ["birthday", "birthday?"];
 const responseForBirthday = ["Yeah.. birthdays.. mines June 8, 1977.. "];
 
 const matchForKim = ["kim", "kardashian", "kim?", "kardashian?"];
-const responseForKim = ["Yo get my wifes name out your mouth!!"];
+const responseForKim = [
+  "Yo get my wifes name out your mouth!!",
+  "I dont speak about her anymore",
+  "Let's change the subject.. 😒",
+];
+
+const matchForFood = [
+  "burger",
+  "cheeseburger",
+  "taco",
+  "tacos",
+  "salmon",
+  "chicken",
+  "vegetables",
+  "soup",
+  "rice",
+  "chinese",
+  "curry",
+  "pizza",
+];
 
 // Response Functions
 
@@ -62,6 +81,34 @@ const kanyeReplyAPI = () => {
       .catch((err) => console.error("Kanye West API ERROR: ", err));
 
     const kanyeReply = (reply) => {
+      const kanyeReply = logThis(reply);
+      const para = document.createElement("p");
+      para.innerHTML = kanyeReply;
+      para.classList.add("chat-box__kanye-text");
+      chatBox.appendChild(para);
+    };
+  }, 2000);
+};
+
+const kanyeFood = (foodItem) => {
+  const MEALDB_API = `https://www.themealdb.com/api/json/v1/1/search.php?s=${foodItem}`;
+  setTimeout(() => {
+    axios
+      .get(MEALDB_API)
+      .then((response) => {
+        const meals = {
+          mealData: response.data.meals,
+          mealName: response.data.meals[0].strMeal,
+          mealURL: response.data.meals[0].strSource,
+        };
+        console.log(meals);
+        const reply = `Yo you should try ${meals.mealName}.. Heres a link ${meals.mealURL}`;
+        kanyeReply(reply);
+      })
+      .catch((err) => console.error("Meal DB API ERROR: ", err));
+
+    const kanyeReply = (reply) => {
+      console.log(reply);
       const kanyeReply = logThis(reply);
       const para = document.createElement("p");
       para.innerHTML = kanyeReply;
@@ -125,6 +172,10 @@ form.addEventListener("submit", (e) => {
   const yourMessageArr = lowerCaseString.split(" ");
   console.log(yourMessageArr);
 
+  // if ((yourMessageArr, matchForFood)) {
+  //   kanyeFood(yourMessageArr);
+  // }
+
   // Kim Response
   if (doesItMatch(yourMessageArr, matchForKim)) {
     kanyeResponse(responseForKim);
@@ -160,6 +211,12 @@ form.addEventListener("submit", (e) => {
   } else {
     kanyeReplyAPI();
   }
+
+  // if ((yourMessageArr, matchForFood)) {
+  //   kanyeFood(yourMessageArr);
+  // } else {
+  //   kanyeReplyAPI();
+  // }
 
   console.log(userMsg);
 });
