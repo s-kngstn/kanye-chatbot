@@ -9,6 +9,7 @@
     height: calc(100vh - 132px);
     
     @include tablet {
+      height: none;
       padding: 2rem 0;
     }
   }
