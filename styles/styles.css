@@ -7,6 +7,7 @@
 }
 
 body {
+  height: 100%;
   color: rgb(186, 227, 124);
   background-color: #e6e6e6;
   font-family: "IBM Plex Mono", monospace, sans-serif;
@@ -29,15 +30,26 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
-  height: calc(100vh - 132px);
+}
+@media (min-width: 768px) {
+  .phone__contain {
+    padding: 2rem 0;
+  }
 }
 .phone__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   display: inline-block;
-  width: 360px;
   border: 6px #0f0f0f solid;
-  border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+@media (min-width: 768px) {
+  .phone__container {
+    width: 360px;
+    border-radius: 6px;
+  }
 }
 
 .phone-header {
