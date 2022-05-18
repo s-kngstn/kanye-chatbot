@@ -73,6 +73,9 @@ const matchForFood = [
   "rice",
   "curry",
   "pizza",
+  "pasta",
+  "tuna",
+  "salad",
 ];
 
 // Response Functions
@@ -105,7 +108,7 @@ const kanyeFood = (foodItem) => {
     axios
       .get(MEALDB_API)
       .then((response) => {
-        let meal =
+        const meal =
           response.data.meals[
             Math.floor(Math.random() * response.data.meals.length)
           ];
@@ -120,7 +123,6 @@ const kanyeFood = (foodItem) => {
         kanyeReply(`${meals.mealURL}`, "a");
       })
       .catch((err) => console.error("Meal DB API ERROR: ", err));
-
     const kanyeReply = (reply, tag) => {
       console.log(reply);
       const kanyeReply = logThis(reply);
@@ -164,7 +166,6 @@ const doesItMatch = (messageArray, messageMatches) => {
   const match = messageMatches.filter((element) =>
     messageArray.includes(element)
   );
-  console.log(match);
   if (match.length > 0) {
     return true;
   } else {
@@ -233,6 +234,4 @@ form.addEventListener("submit", (e) => {
   } else {
     kanyeReplyAPI();
   }
-
-  console.log(userMsg);
 });
