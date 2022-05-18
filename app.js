@@ -76,6 +76,7 @@ const matchForFood = [
   "pasta",
   "tuna",
   "salad",
+  "fish",
 ];
 
 // Response Functions

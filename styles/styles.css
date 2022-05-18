@@ -30,6 +30,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: calc(100vh - 132px);
 }
 @media (min-width: 768px) {
   .phone__contain {
@@ -68,7 +69,7 @@ main {
 }
 
 .chat {
-  height: 500px;
+  height: 30rem;
   overflow: auto;
   border: 6px #0f0f0f solid;
   background: url("../assets/images/phone-background.jpeg");
