@@ -182,6 +182,7 @@ form.addEventListener("submit", (e) => {
 
   // if ((yourMessageArr, matchForFood)) {
   //   kanyeFood(yourMessageArr);
+  //   return;
   // }
 
   // Kim Response
