@@ -8,7 +8,7 @@
 
 body {
   color: rgb(186, 227, 124);
-  background-color: #111;
+  background-color: #e6e6e6;
   font-family: "IBM Plex Mono", monospace, sans-serif;
 }
 
@@ -29,7 +29,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e6e6e6;
   padding: 2rem 0;
   height: calc(100vh - 132px);
 }
