@@ -63,15 +63,14 @@ const responseForKim = [
 
 const matchForFood = [
   "burger",
+  "burgers",
   "cheeseburger",
   "taco",
   "tacos",
   "salmon",
   "chicken",
-  "vegetables",
   "soup",
   "rice",
-  "chinese",
   "curry",
   "pizza",
 ];
@@ -106,21 +105,31 @@ const kanyeFood = (foodItem) => {
     axios
       .get(MEALDB_API)
       .then((response) => {
+        let meal =
+          response.data.meals[
+            Math.floor(Math.random() * response.data.meals.length)
+          ];
         const meals = {
-          mealData: response.data.meals,
-          mealName: response.data.meals[0].strMeal,
-          mealURL: response.data.meals[0].strSource,
+          mealData: meal,
+          mealName: meal.strMeal,
+          mealURL: meal.strSource,
         };
         console.log(meals);
-        const reply = `Yo you should try ${meals.mealName}.. Heres a link ${meals.mealURL}`;
-        kanyeReply(reply);
+        const reply = `Yo you should try ${meals.mealName}.. here's a link..`;
+        kanyeReply(reply, "p");
+        kanyeReply(`${meals.mealURL}`, "a");
       })
       .catch((err) => console.error("Meal DB API ERROR: ", err));
 
-    const kanyeReply = (reply) => {
+    const kanyeReply = (reply, tag) => {
       console.log(reply);
       const kanyeReply = logThis(reply);
-      const para = document.createElement("p");
+      const para = document.createElement(tag);
+      console.log(para.nodeName);
+      if (para.nodeName === "A") {
+        para.setAttribute("href", kanyeReply);
+        para.setAttribute("target", "_blank");
+      }
       para.innerHTML = kanyeReply;
       para.classList.add("chat-box__kanye-text");
       chatBox.appendChild(para);
@@ -180,10 +189,14 @@ form.addEventListener("submit", (e) => {
   const lowerCaseString = allLowerCase(userMsg);
   const yourMessageArr = lowerCaseString.split(" ");
 
-  // if ((yourMessageArr, matchForFood)) {
-  //   kanyeFood(yourMessageArr);
-  //   return;
-  // }
+  if (doesItMatch(yourMessageArr, matchForFood)) {
+    const match = matchForFood.filter((element) =>
+      yourMessageArr.includes(element)
+    );
+    console.log(match);
+    kanyeFood(match);
+    return;
+  }
 
   // Kim Response
   if (doesItMatch(yourMessageArr, matchForKim)) {

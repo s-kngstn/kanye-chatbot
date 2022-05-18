@@ -1,0 +1,40 @@
+@use "./variables" as *;
+
+// FONT
+
+@mixin font($weight: 400, $size: initial, $color: initial) {
+  font-family: $primary-font;
+  font-style: "regular";
+  color: $color;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+// FLEX
+
+@mixin flex(
+  $justify: initial,
+  $align: initial,
+  $wrap: initial,
+  $direction: initial
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  flex-direction: $direction;
+}
+
+// MEDIA QUERIES
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
