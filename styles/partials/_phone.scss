@@ -6,10 +6,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 132px);
+    // height: calc(100vh - 132px);
     
     @include tablet {
-      height: none;
       padding: 2rem 0;
     }
   }
@@ -21,7 +20,6 @@
     justify-content: center;
     display: inline-block;
     border: 6px $phone-dark solid;
-    // border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
       rgba(0, 0, 0, 0.22) 0px 15px 12px;
 

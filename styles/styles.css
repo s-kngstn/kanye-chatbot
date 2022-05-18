@@ -30,11 +30,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 132px);
 }
 @media (min-width: 768px) {
   .phone__contain {
-    height: none;
     padding: 2rem 0;
   }
 }
