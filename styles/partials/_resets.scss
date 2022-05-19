@@ -13,10 +13,15 @@ body {
   color: rgb(186, 227, 124);
   background-color: #0f0f0f;
   font-family: "IBM Plex Mono", monospace, sans-serif;
+  font-size: 16px;
   
   @include tablet {
     background-color: #e6e6e6;
   }
+}
+
+input, select {
+  font-size: 100%;
 }
 
 a {
