@@ -13,7 +13,7 @@ const responseForHello = [
   "Yo.. any idea where Kim's at? I miss her..",
 ];
 
-const matchesForGoodBye = ["cya", "bye"];
+const matchesForGoodBye = ["cya", "bye", "adios", "laters", "goodbye"];
 const responseForGoodBye = [
   "Peace",
   "Laters..Dont forget to buy my next album!!",

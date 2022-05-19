@@ -9,8 +9,13 @@
 body {
   height: 100%;
   color: rgb(186, 227, 124);
-  background-color: #e6e6e6;
+  background-color: #0f0f0f;
   font-family: "IBM Plex Mono", monospace, sans-serif;
+}
+@media (min-width: 768px) {
+  body {
+    background-color: #e6e6e6;
+  }
 }
 
 a {
@@ -34,6 +39,7 @@ main {
 @media (min-width: 768px) {
   .phone__contain {
     padding: 2rem 0;
+    height: calc(100vh - 132px);
   }
 }
 .phone__container {
@@ -41,6 +47,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
   display: inline-block;
   border: 6px #0f0f0f solid;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
