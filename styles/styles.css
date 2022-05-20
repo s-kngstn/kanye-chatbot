@@ -6,6 +6,16 @@
   padding: 0;
 }
 
+::-moz-selection {
+  color: lime;
+  background-color: hotpink;
+}
+
+::selection {
+  color: lime;
+  background-color: hotpink;
+}
+
 body {
   height: 100%;
   color: rgb(186, 227, 124);
