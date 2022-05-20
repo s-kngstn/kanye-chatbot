@@ -236,3 +236,14 @@ form.addEventListener("submit", (e) => {
     kanyeReplyAPI();
   }
 });
+
+// Change Header
+const header = document.querySelector(".header__title");
+
+header.addEventListener("mouseenter", () => {
+  header.innerText = "How to interact with Kanye";
+});
+
+header.addEventListener("mouseleave", () => {
+  header.innerText = "Chat with Kanye";
+});

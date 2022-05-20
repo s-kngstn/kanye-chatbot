@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
     <title>Chat with Kanye</title>
+    <link rel="shortcut icon" href="./assets/images/kanye-favicon.ico" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
       rel="stylesheet"
@@ -16,62 +20,86 @@
     ></script>
   </head>
   <body>
-
-      <header class="header">
-        <!-- 
+    <header class="header">
+      <!-- 
           <h2>Feeling Lonely?</h2>
           <h3>Need some advice?</h3>
           <h1>Kanye's got your back...</h1> -->
-          <h1 class="header__title">Chat with Kanye</h1>
-        </header>
-        <div class="phone__contain">
-          <div class="phone__container">
-            <div class="phone-header">
-              <img
-              class="phone-header__avatar"
-              src="./assets/images/kanye-avatar.jpeg"
-              alt="kanye avatar"
-              />
-              <h2 class="phone-header__title">Kanye West</h2>
-            </div>
-            <main>
-              <div class="chat">
-                <div class="chat-box"></div>
-              </div>
-              <div class="kanye">
-                <img class="kanye__image" src="./assets/images/kanye-face.png" alt="kanye smiling head">
-              </div>
-            </main>
-            <div class="phone-footer">
-              <section class="phone-footer__section">
-                <form class="chat-box__form">
-                  <input
-                  class="chat-box__input"
-                  type="text"
-                  name="userInput"
-                  id="userInput"
-                  placeholder="Type a message"
-                  />
-                  <button class="chat-box__btn" id="btn" type="submit">
-                    <i class="fa fa-send"></i>
-                  </button>
-                </form>
-              </section>
-            </div>
-          </div>
+      <a
+        href="https://github.com/s-kngstn/kanye-chatbot#readme"
+        target="_blank"
+      >
+        <h1 class="header__title">Chat with Kanye</h1>
+      </a>
+    </header>
+    <div class="phone__contain">
+      <div class="phone__container">
+        <div class="phone-header">
+          <img
+            class="phone-header__avatar"
+            src="./assets/images/kanye-avatar.jpeg"
+            alt="kanye avatar"
+          />
+          <h2 class="phone-header__title">Kanye West</h2>
         </div>
-        <footer class="footer">
-          <ul class="footer__list">
-            <li class="footer__list-item"><a href="https://github.com/s-kngstn" target="_blank"><i class="fa fa-github fa-lg"></i></a></li>
-            <li class="footer__list-item"><a href="https://www.linkedin.com/in/s-kngstn/" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a></li>
-            <li class="footer__list-item"><a href="https://stackoverflow.com/users/14645279/sam-kingston"  target="_blank"><i class="fa fa-stack-overflow fa-lg"></i></a></li>
-          </ul>
-          <p class="footer__copyright">
-            <a href="http://www.samkingston.xyz" target="_blank"> 2022 &copy; samkingston.xyz </a>
-          </p>
-        </footer>
-        <script
-        src="https://kit.fontawesome.com/55981f14a4.js"
+        <main>
+          <div class="chat">
+            <div class="chat-box"></div>
+          </div>
+          <div class="kanye">
+            <img
+              class="kanye__image"
+              src="./assets/images/kanye-face.png"
+              alt="kanye smiling head"
+            />
+          </div>
+        </main>
+        <div class="phone-footer">
+          <section class="phone-footer__section">
+            <form class="chat-box__form">
+              <input
+                class="chat-box__input"
+                type="text"
+                name="userInput"
+                id="userInput"
+                placeholder="Type a message"
+              />
+              <button class="chat-box__btn" id="btn" type="submit">
+                <i class="fa fa-send"></i>
+              </button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <a href="https://github.com/s-kngstn" target="_blank"
+            ><i class="fa fa-github fa-lg"></i
+          ></a>
+        </li>
+        <li class="footer__list-item">
+          <a href="https://www.linkedin.com/in/s-kngstn/" target="_blank"
+            ><i class="fa fa-linkedin fa-lg"></i
+          ></a>
+        </li>
+        <li class="footer__list-item">
+          <a
+            href="https://stackoverflow.com/users/14645279/sam-kingston"
+            target="_blank"
+            ><i class="fa fa-stack-overflow fa-lg"></i
+          ></a>
+        </li>
+      </ul>
+      <p class="footer__copyright">
+        <a href="http://www.samkingston.xyz" target="_blank">
+          2022 &copy; samkingston.xyz
+        </a>
+      </p>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/55981f14a4.js"
       crossorigin="anonymous"
     ></script>
     <script src="app.js"></script>
