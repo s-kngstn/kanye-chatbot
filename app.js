@@ -20,7 +20,7 @@ const responseForGoodBye = [
   "Yoo! Dont go! I'm so lonely since Kim left.. ",
 ];
 
-const matchesForTime = ["time"];
+const matchesForTime = ["time", "time?"];
 const responseForTime = [
   `It's my time.. Yeezy Season!! But I'm pretty sure your time is.. ${new Date().toLocaleTimeString()}`,
 ];
