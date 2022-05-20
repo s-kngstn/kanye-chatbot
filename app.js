@@ -20,6 +20,11 @@ const responseForGoodBye = [
   "Yoo! Dont go! I'm so lonely since Kim left.. ",
 ];
 
+const matchesForTime = ["time"];
+const responseForTime = [
+  `It's my time.. Yeezy Season!! But I'm pretty sure your time is.. ${new Date().toLocaleTimeString()}`,
+];
+
 const matchForFortune = ["fortune", "fortune?"];
 const responseForFortune = [
   "A beautiful, smart, and loving person will be coming into your life",
@@ -191,6 +196,7 @@ form.addEventListener("submit", (e) => {
   const lowerCaseString = allLowerCase(userMsg);
   const yourMessageArr = lowerCaseString.split(" ");
 
+  // Food API
   if (doesItMatch(yourMessageArr, matchForFood)) {
     const match = matchForFood.filter((element) =>
       yourMessageArr.includes(element)
@@ -215,6 +221,12 @@ form.addEventListener("submit", (e) => {
   // Age Response
   if (doesItMatch(yourMessageArr, matchForAge)) {
     kanyeResponse(responseForAge);
+    return;
+  }
+
+  // Time Response
+  if (doesItMatch(yourMessageArr, matchesForTime)) {
+    kanyeResponse(responseForTime);
     return;
   }
 
